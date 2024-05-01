@@ -14,7 +14,11 @@ export default defineNuxtConfig({
   experimental: {
     viewTransition: true
   },
-  modules: ["@nuxt/ui", "nuxt-auth-sanctum"],
+  modules: [
+    "@pinia/nuxt",
+    "@nuxt/ui",
+    "nuxt-auth-sanctum"
+  ],
   sanctum: {
     baseUrl: 'http://localhost:8000',
   },

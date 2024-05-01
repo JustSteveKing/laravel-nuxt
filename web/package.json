@@ -12,6 +12,7 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxt/ui": "^2.13.0",
+    "@pinia/nuxt": "^0.5.1",
     "nuxt": "^3.10.1",
     "nuxt-auth-sanctum": "^0.3.0"
   }
