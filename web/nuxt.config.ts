@@ -19,7 +19,17 @@ export default defineNuxtConfig({
     "@nuxt/ui",
     "nuxt-auth-sanctum"
   ],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    }
+  },
   sanctum: {
     baseUrl: 'http://localhost:8000',
+    redirectIfAuthenticated: true,
+    redirect: {
+      onAuthOnly: '/auth/login'
+    },
   },
 })
