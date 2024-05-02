@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7eeeb3ea018801b448b9521e6893e148",
+    "content-hash": "7257906a39cf627c10eb1c11596241ce",
     "packages": [
         {
             "name": "brick/math",
@@ -1102,6 +1102,66 @@
                 }
             ],
             "time": "2023-12-03T19:50:20+00:00"
+        },
+        {
+            "name": "juststeveking/sdk-tools",
+            "version": "0.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JustSteveKing/sdk-tools.git",
+                "reference": "4b951a3e0863a35de4c1ddd21160443f9a222ee1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JustSteveKing/sdk-tools/zipball/4b951a3e0863a35de4c1ddd21160443f9a222ee1",
+                "reference": "4b951a3e0863a35de4c1ddd21160443f9a222ee1",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1",
+                "php-http/discovery": "^1.15",
+                "psr/http-factory": "^1.0",
+                "psr/http-message": "^1.0 | ^2.0"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.7",
+                "nyholm/psr7": "^1.5",
+                "pestphp/pest": "^2.2",
+                "php-http/mock-client": "^1.5",
+                "phpstan/phpstan": "^1.10",
+                "symfony/http-client": "^6.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "JustSteveKing\\Tools\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Steve McDougall",
+                    "email": "juststevemcd@gmail.com",
+                    "homepage": "https://www.juststeveking.uk/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A set of tools you can use to help make better SDKs.",
+            "homepage": "https://www.juststeveking.uk/",
+            "keywords": [
+                "SDK tools",
+                "api",
+                "psr",
+                "sdk"
+            ],
+            "support": {
+                "issues": "https://github.com/JustSteveKing/sdk-tools/issues",
+                "source": "https://github.com/JustSteveKing/sdk-tools/tree/0.0.5"
+            },
+            "time": "2023-07-10T12:49:10+00:00"
         },
         {
             "name": "laravel/breeze",
@@ -2509,6 +2569,85 @@
                 }
             ],
             "time": "2024-03-06T16:17:14+00:00"
+        },
+        {
+            "name": "php-http/discovery",
+            "version": "1.19.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-http/discovery.git",
+                "reference": "0700efda8d7526335132360167315fdab3aeb599"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-http/discovery/zipball/0700efda8d7526335132360167315fdab3aeb599",
+                "reference": "0700efda8d7526335132360167315fdab3aeb599",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0|^2.0",
+                "php": "^7.1 || ^8.0"
+            },
+            "conflict": {
+                "nyholm/psr7": "<1.0",
+                "zendframework/zend-diactoros": "*"
+            },
+            "provide": {
+                "php-http/async-client-implementation": "*",
+                "php-http/client-implementation": "*",
+                "psr/http-client-implementation": "*",
+                "psr/http-factory-implementation": "*",
+                "psr/http-message-implementation": "*"
+            },
+            "require-dev": {
+                "composer/composer": "^1.0.2|^2.0",
+                "graham-campbell/phpspec-skip-example-extension": "^5.0",
+                "php-http/httplug": "^1.0 || ^2.0",
+                "php-http/message-factory": "^1.0",
+                "phpspec/phpspec": "^5.1 || ^6.1 || ^7.3",
+                "sebastian/comparator": "^3.0.5 || ^4.0.8",
+                "symfony/phpunit-bridge": "^6.4.4 || ^7.0.1"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Http\\Discovery\\Composer\\Plugin",
+                "plugin-optional": true
+            },
+            "autoload": {
+                "psr-4": {
+                    "Http\\Discovery\\": "src/"
+                },
+                "exclude-from-classmap": [
+                    "src/Composer/Plugin.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Márk Sági-Kazár",
+                    "email": "mark.sagikazar@gmail.com"
+                }
+            ],
+            "description": "Finds and installs PSR-7, PSR-17, PSR-18 and HTTPlug implementations",
+            "homepage": "http://php-http.org",
+            "keywords": [
+                "adapter",
+                "client",
+                "discovery",
+                "factory",
+                "http",
+                "message",
+                "psr17",
+                "psr7"
+            ],
+            "support": {
+                "issues": "https://github.com/php-http/discovery/issues",
+                "source": "https://github.com/php-http/discovery/tree/1.19.4"
+            },
+            "time": "2024-03-29T13:00:05+00:00"
         },
         {
             "name": "phpoption/phpoption",

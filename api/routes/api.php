@@ -2,7 +2,16 @@
 
 declare(strict_types=1);
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::middleware(['auth:sanctum'])->get('/user', fn(Request $request) => $request->user());
+Route::as('api:')->group(static function (): void {
+    Route::middleware(['auth:sanctum'])->group(static function (): void {
+        Route::get('user', App\Http\Controllers\Api\Auth\UserController::class)->name('user');
+
+        Route::prefix('users')->as('users:')->group(static function (): void {
+            Route::get('/', App\Http\Controllers\Api\Users\IndexController::class)->name('index')->middleware([
+                'permission:users.list',
+            ]);
+        });
+    });
+});

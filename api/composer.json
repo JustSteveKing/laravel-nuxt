@@ -10,6 +10,7 @@
   "require": {
     "php": "^8.3",
     "directorytree/authorization": "^1.2",
+    "juststeveking/sdk-tools": "^0.0.5",
     "laravel/breeze": "^2.0.3",
     "laravel/framework": "^11.6",
     "laravel/sanctum": "^4.0.2",

@@ -31,5 +31,9 @@ export default defineNuxtConfig({
     redirect: {
       onAuthOnly: '/auth/login'
     },
+    globalMiddleware: {
+      enabled: false,
+    },
   },
+  ssr: false
 })

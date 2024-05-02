@@ -24,8 +24,8 @@ import {
 import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/vue/20/solid'
 
 const navigation = [
-  { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
-  { name: 'Team', href: '#', icon: UsersIcon, current: false },
+  { name: 'Dashboard', href: '/', icon: HomeIcon, current: true },
+  { name: 'Users', href: '/users', icon: UsersIcon, current: false },
   { name: 'Projects', href: '#', icon: FolderIcon, current: false },
   { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
   { name: 'Documents', href: '#', icon: DocumentDuplicateIcon, current: false },
@@ -118,22 +118,22 @@ const sidebarOpen = ref(false)
 
             <div class="hidden lg:block lg:h-6 lg:w-px bg-slate-900/10 dark:bg-slate-50/10" aria-hidden="true" />
 
-            <Menu as="div" class="relative">
-              <MenuButton class="-m-1.5 flex items-center p-1.5">
-                <span class="sr-only">Open user menu</span>
-                <span class="hidden lg:flex lg:items-center">
-                  <span class="text-sm font-semibold leading-6" aria-hidden="true">{{user.name}}</span>
-                  <ChevronDownIcon class="ml-2 h-5 w-5" aria-hidden="true" />
-                </span>
-              </MenuButton>
-              <transition enter-active-class="transition ease-out duration-100" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
-                <MenuItems class="absolute right-0 z-10 mt-2.5 w-32 origin-top-right rounded-md bg-slate-100 dark:bg-slate-800 py-2 shadow-lg ring-1 ring-slate-900/5 dark:ring-slate-50/5 focus:outline-none">
-                  <MenuItem v-for="item in userNavigation" :key="item.name" v-slot="{ active }">
-                    <a :href="item.href" :class="[active ? 'bg-gray-50' : '', 'block px-3 py-1 text-sm leading-6']">{{ item.name }}</a>
-                  </MenuItem>
-                </MenuItems>
-              </transition>
-            </Menu>
+<!--            <Menu as="div" class="relative">-->
+<!--              <MenuButton class="-m-1.5 flex items-center p-1.5">-->
+<!--                <span class="sr-only">Open user menu</span>-->
+<!--                <span class="hidden lg:flex lg:items-center">-->
+<!--                  <span class="text-sm font-semibold leading-6" aria-hidden="true">{{user.name}}</span>-->
+<!--                  <ChevronDownIcon class="ml-2 h-5 w-5" aria-hidden="true" />-->
+<!--                </span>-->
+<!--              </MenuButton>-->
+<!--              <transition enter-active-class="transition ease-out duration-100" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">-->
+<!--                <MenuItems class="absolute right-0 z-10 mt-2.5 w-32 origin-top-right rounded-md bg-slate-100 dark:bg-slate-800 py-2 shadow-lg ring-1 ring-slate-900/5 dark:ring-slate-50/5 focus:outline-none">-->
+<!--                  <MenuItem v-for="item in userNavigation" :key="item.name" v-slot="{ active }">-->
+<!--                    <a :href="item.href" :class="[active ? 'bg-gray-50' : '', 'block px-3 py-1 text-sm leading-6']">{{ item.name }}</a>-->
+<!--                  </MenuItem>-->
+<!--                </MenuItems>-->
+<!--              </transition>-->
+<!--            </Menu>-->
           </div>
         </div>
       </div>

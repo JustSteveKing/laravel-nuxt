@@ -5,8 +5,7 @@ declare(strict_types=1);
 namespace App\Models;
 
 use Carbon\CarbonInterface;
-use DirectoryTree\Authorization\Traits\HasPermissions;
-use DirectoryTree\Authorization\Traits\HasRoles;
+use DirectoryTree\Authorization\Traits\Authorizable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
@@ -33,10 +32,9 @@ use Laravel\Sanctum\PersonalAccessToken;
  */
 final class User extends Authenticatable implements MustVerifyEmail
 {
+    use Authorizable;
     use HasApiTokens;
     use HasFactory;
-    use HasPermissions;
-    use HasRoles;
     use HasUuids;
     use Notifiable;
     use SoftDeletes;
